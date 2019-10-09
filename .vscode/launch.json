@@ -21,7 +21,7 @@
             "name": "Jasmine Individual Test", 
             "program": "${workspaceRoot}\\node_modules\\jasmine-node\\bin\\jasmine-node", 
             "args": [ 
-                "specs\\collectionOperator\\get_integer_interval_2_spec.js"
+                "specs\\collectionOperator\\get_letter_interval_2_spec.js"
             ], 
             "env": { 
                 "NODE_PATH": "." 
