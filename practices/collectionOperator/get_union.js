@@ -1,7 +1,8 @@
 'use strict';
 
 function get_union(collection_a, collection_b) {
-  //write code here
+  return collection_a.concat(collection_b)
+    .filter((value, index, combined)=>combined.indexOf(value) === index);  
 }
 
 module.exports = get_union;

@@ -12,7 +12,7 @@ function grouping_count(collection) {
     }
     groupMap[element]=updatedValue;
   }
-  return "groupMap";
+  return groupMap;
 }
 
 module.exports = grouping_count;

@@ -1,7 +1,6 @@
 'use strict';
 
 const NUMBER_LETTERS_IN_THE_ALPHABET = 26;
-const LETTER_ASCII_INDEX = 97;
 
 const ALPHABET = {
   0:"a",
