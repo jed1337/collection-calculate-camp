@@ -31,4 +31,3 @@ describe('get_integer_interval_2', function () {
     expect(result).toEqual([]);
   });
 });
-
