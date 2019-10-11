@@ -1,27 +1,23 @@
 'use strict';
 const fromBackTick = 96;
 
-var number_map_to_word_over_26 = function(collection){
-  // return ['a','m','aa','ad','y','aa'];
+var number_map_to_word_over_26 = function (collection) {
+  return collection
+    .map(element => {
+      const ones = element % 26;
+      const tens = Math.floor(element / 26);
 
-  let wordList = [];
-  for(let element of collection){
-    let ones = element%26;
-    let tens = Math.floor(element/26);
+      const onesLetter = String.fromCharCode(fromBackTick + ones);
+      const tensLetter = String.fromCharCode(fromBackTick + tens);
 
-    let onesLetter = String.fromCharCode(fromBackTick+ones);
-    let tensLetter = String.fromCharCode(fromBackTick+tens);
-
-    if(tens === 0){
-      wordList.push(`${onesLetter}`);
-    } else if(tens>0 && ones === 0){
-      wordList.push(`${tensLetter}a`);
-    } else if(tens>0 && ones !==0){
-      wordList.push(`${tensLetter}${onesLetter}`);
-    }
-
-  }
-  return wordList;
+      if (tens === 0) {
+        return `${onesLetter}`;
+      } else if (tens > 0 && ones === 0) {
+        return `${tensLetter}a`;
+      } else if (tens > 0 && ones !== 0) {
+        return `${tensLetter}${onesLetter}`;
+      }
+    });
 };
 
 module.exports = number_map_to_word_over_26;
